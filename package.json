@@ -19,6 +19,9 @@
 	"homepage": "https://github.com/avecms/fullstack-javascript-project-44#readme",
 	"author": "XakTuBucT",
 	"license": "ISC",
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"readline-sync": "^1.4.10"
+	}
   }
   
