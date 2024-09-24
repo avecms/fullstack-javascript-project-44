@@ -35,7 +35,7 @@ const calcOperation = (a, b, op) => {
       break;
   }
 
-  return result.toString();
+  return String(result);
 };
 
 export default () => {
