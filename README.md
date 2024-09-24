@@ -69,3 +69,19 @@ brain-progression
 #### Пример игры
 
 [![asciicast](https://asciinema.org/a/XEF6awFkmbxuaxWjo99CC9rxj.svg)](https://asciinema.org/a/XEF6awFkmbxuaxWjo99CC9rxj)
+
+***
+
+### Игра: "Простое ли число?"
+
+> Простые числа - это числа, которые делятся без остатка только на 1 и на само себя.
+
+#### Запуск игры
+
+```
+brain-prime
+```
+
+#### Пример игры
+
+[![asciicast](https://asciinema.org/a/1O7BcF9KJetX4HPNG3H15L56C.svg)](https://asciinema.org/a/1O7BcF9KJetX4HPNG3H15L56C)

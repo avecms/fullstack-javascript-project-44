@@ -1,5 +1,4 @@
 const randomNumber = (max = 0, min = 100) => (Math.floor(Math.random() * (max - min + 1)) + min);
-
 const showGameRules = (rules) => console.log(rules);
 const showCongratulation = (name) => console.log(`Congratulations, ${name}!`);
 const showQuestion = (question) => console.log(`Question: ${question}`);
