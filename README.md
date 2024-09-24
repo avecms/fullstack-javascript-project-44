@@ -4,3 +4,4 @@
 
 ### Демонстрация игр:
 [brain-even](https://asciinema.org/a/RmvVAzFthRSbELOmULsqp3cpA
+[brain-calc](https://asciinema.org/a/mjwy0az3siZFM80EPvyd1E6gu
