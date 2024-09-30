@@ -1,4 +1,4 @@
-import { randomNumber } from '../help/func.js';
+import randomNumber from '../help/utils.js';
 
 export const config = {
   rounds: 3,

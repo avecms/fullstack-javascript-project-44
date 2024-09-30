@@ -1,12 +1,20 @@
 import readlineSync from 'readline-sync';
 import welcomeMessage from './cli.js';
-import {
-  showGameRules,
-  showCongratulation,
-  showQuestion,
-  showCorrect,
-  showWrong,
-} from './help/func.js';
+
+const showGameRules = (rules) => console.log(rules);
+const showCongratulation = (name) => console.log(`Congratulations, ${name}!`);
+const showQuestion = (question) => console.log(`Question: ${question}`);
+const showCorrect = () => console.log('Correct!');
+const showYesNo = (result) => {
+  if (typeof result === 'boolean') {
+    return result === true ? 'yes' : 'no';
+  }
+  return result;
+};
+const showWrong = (answer, result, name) => {
+  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.`);
+  console.log(`Let's try again, ${name}!`);
+};
 
 export default (config, getRound) => {
   const userName = welcomeMessage();
@@ -16,14 +24,15 @@ export default (config, getRound) => {
 
   while (roundCount > 0) {
     const [question, result] = getRound();
+
     showQuestion(question);
 
     const answer = readlineSync.question('Your answer: ');
 
-    if (answer === result) {
+    if (answer === showYesNo(result)) {
       showCorrect();
     } else {
-      showWrong(answer, result, userName);
+      showWrong(answer, showYesNo(result), userName);
       break;
     }
 

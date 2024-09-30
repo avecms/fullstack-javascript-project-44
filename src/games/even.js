@@ -1,4 +1,4 @@
-import { randomNumber, answerYesNo } from '../help/func.js';
+import randomNumber from '../help/utils.js';
 
 export const config = {
   rounds: 3,
@@ -11,7 +11,7 @@ export default () => {
   const numberOne = randomNumber(1, 100);
 
   const roundQuestion = `${numberOne}`;
-  const roundResult = answerYesNo(checkEven(numberOne));
+  const roundResult = checkEven(numberOne);
 
   return [roundQuestion, roundResult];
 };

@@ -1,4 +1,4 @@
-import { randomNumber, answerYesNo } from '../help/func.js';
+import randomNumber from '../help/utils.js';
 
 export const config = {
   rounds: 3,
@@ -23,7 +23,7 @@ export default () => {
   const numberOne = randomNumber(1, 100);
 
   const roundQuestion = `${numberOne}`;
-  const roundResult = answerYesNo(isPrime(numberOne));
+  const roundResult = isPrime(numberOne);
 
   return [roundQuestion, roundResult];
 };

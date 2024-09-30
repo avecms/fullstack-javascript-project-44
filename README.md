@@ -1,87 +1,85 @@
 ### Hexlet tests and linter status:
+
 [![Actions Status](https://github.com/avecms/fullstack-javascript-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/avecms/fullstack-javascript-project-44/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/55ca32f05c6e2be3146e/maintainability)](https://codeclimate.com/github/avecms/fullstack-javascript-project-44/maintainability)
 
-## «Игры разума»
+# Brain Games
 
-Набор консольных игр, построенных по принципу популярных мобильных приложений для прокачки мозга.
+**Brain Games** – is a set of logic mini-games that help train thinking and improve memory.
 
-***
+## How to download
 
-### Игра: "Проверка на четность"
+1. Clone the repository:
+   ```bash
+   git clone git@github.com:avecms/fullstack-javascript-project-44.git
+   ```
 
-> Суть игры в следующем: пользователю показывается случайное число. И ему нужно ответить **yes**, если число чётное, или **no** — если нечётное
+2. Install:
+   ```bash
+   make install
+   ```
 
-#### Запуск игры
+## Games guides:
 
-```
+### "Brain even"
+
+Launch game
+```bash
 brain-even
 ```
 
-#### Пример игры
+#### Guide:
 
 [![asciicast](https://asciinema.org/a/RmvVAzFthRSbELOmULsqp3cpA.svg)](https://asciinema.org/a/RmvVAzFthRSbELOmULsqp3cpA)
 
-***
+---
 
-### Игра: "Калькулятор"
+### "Brain calc"
 
-> Суть игры в следующем: пользователю показывается случайное математическое выражение, например **35 + 16**, которое нужно вычислить и записать правильный ответ
-
-#### Запуск игры
-
-```
+Launch game
+```bash
 brain-calc
 ```
 
-#### Пример игры
+#### Guide
 
 [![asciicast](https://asciinema.org/a/mjwy0az3siZFM80EPvyd1E6gu.svg)](https://asciinema.org/a/mjwy0az3siZFM80EPvyd1E6gu)
 
-***
+---
 
-### Игра: "Наибольший общий делитель (НОД)"
+### "Brain gcd"
 
-> Суть игры в следующем: пользователю показывается два случайных числа, например, **25 50**. Пользователь должен вычислить и ввести наибольший общий делитель этих чисел.
-
-#### Запуск игры
-
-```
+Launch game
+```bash
 brain-gcd
 ```
 
-#### Пример игры
+#### Guide
 
 [![asciicast](https://asciinema.org/a/srPfZ8E2cdGwBb7xOeK5sGRpt.svg)](https://asciinema.org/a/srPfZ8E2cdGwBb7xOeK5sGRpt)
 
-***
+---
 
-### Игра: "Арифметическая прогрессия"
+### "Brain progression"
 
-> Показываем игроку ряд чисел, образующий арифметическую прогрессию, заменив любое из чисел двумя точками. Игрок должен определить это число.
-
-#### Запуск игры
-
-```
+Launch game
+```bash
 brain-progression
 ```
 
-#### Пример игры
+#### Guide
 
 [![asciicast](https://asciinema.org/a/XEF6awFkmbxuaxWjo99CC9rxj.svg)](https://asciinema.org/a/XEF6awFkmbxuaxWjo99CC9rxj)
 
-***
+---
 
-### Игра: "Простое ли число?"
+### "Brain prime"
 
-> Простые числа - это числа, которые делятся без остатка только на 1 и на само себя.
-
-#### Запуск игры
-
-```
+Launch game
+```bash
 brain-prime
 ```
 
-#### Пример игры
+#### Guide
 
 [![asciicast](https://asciinema.org/a/1O7BcF9KJetX4HPNG3H15L56C.svg)](https://asciinema.org/a/1O7BcF9KJetX4HPNG3H15L56C)
