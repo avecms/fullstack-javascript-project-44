@@ -1,10 +1,5 @@
 import randomNumber from '../help/utils.js';
 
-export const config = {
-  rounds: 3,
-  rule: 'What number is missing in the progression?',
-};
-
 const getProgression = (num, step) => {
   let arr = [];
   let summ = num;
@@ -22,6 +17,8 @@ const getQuestionArr = (arr, ind) => {
   newArr[ind] = '..';
   return newArr;
 };
+
+export const rules = 'What number is missing in the progression?';
 
 export default () => {
   const numberStart = randomNumber(0, 50);

@@ -1,10 +1,5 @@
 import randomNumber from '../help/utils.js';
 
-export const config = {
-  rounds: 3,
-  rule: 'What is the result of the expression?',
-};
-
 const calcOperands = ['+', '-', '*'];
 
 const getCalcOperator = () => {
@@ -37,6 +32,8 @@ const calcOperation = (a, b, op) => {
 
   return String(result);
 };
+
+export const rules = 'What is the result of the expression?';
 
 export default () => {
   const numberOne = randomNumber(1, 100);

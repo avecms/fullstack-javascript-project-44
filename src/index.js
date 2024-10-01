@@ -1,45 +1,28 @@
 import readlineSync from 'readline-sync';
 import welcomeMessage from './cli.js';
 
-const showGameRules = (rules) => console.log(rules);
-const showCongratulation = (name) => console.log(`Congratulations, ${name}!`);
-const showQuestion = (question) => console.log(`Question: ${question}`);
-const showCorrect = () => console.log('Correct!');
-const showYesNo = (result) => {
-  if (typeof result === 'boolean') {
-    return result === true ? 'yes' : 'no';
-  }
-  return result;
-};
-const showWrong = (answer, result, name) => {
-  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.`);
-  console.log(`Let's try again, ${name}!`);
-};
-
-export default (config, getRound) => {
+const runEngine = (rules, makeRound) => {
+  const roundsCount = 3;
   const userName = welcomeMessage();
-  showGameRules(config.rule);
+  console.log(rules);
 
-  let roundCount = config.rounds;
+  for (let i = 0; i < roundsCount; i += 1) {
+    const [question, correctAnswer] = makeRound();
 
-  while (roundCount > 0) {
-    const [question, result] = getRound();
+    console.log(`Question: ${question}`);
 
-    showQuestion(question);
+    const userAnswer = readlineSync.question('Your answer: ');
 
-    const answer = readlineSync.question('Your answer: ');
-
-    if (answer === showYesNo(result)) {
-      showCorrect();
+    if (userAnswer === correctAnswer) {
+      console.log('Correct!');
     } else {
-      showWrong(answer, showYesNo(result), userName);
-      break;
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`Let's try again, ${userName}!`);
+      return;
     }
-
-    roundCount -= 1;
   }
 
-  if (roundCount <= 0) {
-    showCongratulation(userName);
-  }
+  console.log(`Congratulations, ${userName}!`);
 };
+
+export default runEngine;

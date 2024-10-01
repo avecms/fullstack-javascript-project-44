@@ -1,10 +1,5 @@
 import randomNumber from '../help/utils.js';
 
-export const config = {
-  rounds: 3,
-  rule: 'Find the greatest common divisor of given numbers.',
-};
-
 const getGcd = (a, b) => {
   let num1 = a;
   let num2 = b;
@@ -17,6 +12,8 @@ const getGcd = (a, b) => {
 
   return String(num1);
 };
+
+export const rules = 'Find the greatest common divisor of given numbers.';
 
 export default () => {
   const numberOne = randomNumber(1, 100);
