@@ -1,4 +1,5 @@
-import randomNumber from '../help/utils.js';
+import getRandomInRange from '../help/utils.js';
+import mainEngine from '../index.js';
 
 const getProgression = (num, step) => {
   let arr = [];
@@ -18,15 +19,18 @@ const getQuestionArr = (arr, ind) => {
   return newArr;
 };
 
-export const rules = 'What number is missing in the progression?';
-
-export default () => {
-  const numberStart = randomNumber(0, 50);
-  const numberStep = randomNumber(0, 10);
-  const numberIndex = randomNumber(0, 9) - 1;
+const generateRound = () => {
+  const numberStart = getRandomInRange(0, 50);
+  const numberStep = getRandomInRange(0, 10);
+  const numberIndex = getRandomInRange(0, 9) - 1;
   const progression = getProgression(numberStart, numberStep);
-  const roundResult = String(progression[numberIndex]);
+  const correctAnswer = String(progression[numberIndex]);
   const roundQuestion = getQuestionArr(progression, numberIndex).join(' ');
 
-  return [roundQuestion, roundResult];
+  return [roundQuestion, correctAnswer];
+};
+
+export default () => {
+  const questionPhrase = 'What number is missing in the progression?';
+  mainEngine(questionPhrase, generateRound);
 };

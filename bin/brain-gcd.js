@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import makeRound, { rules } from '../src/games/gcd.js';
-import runEngine from '../src/index.js';
+import startGame from '../src/games/gcd.js';
 
-runEngine(rules, makeRound);
+startGame();

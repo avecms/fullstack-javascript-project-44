@@ -1,4 +1,5 @@
-import randomNumber from '../help/utils.js';
+import getRandomInRange from '../help/utils.js';
+import mainEngine from '../index.js';
 
 const getGcd = (a, b) => {
   let num1 = a;
@@ -13,13 +14,16 @@ const getGcd = (a, b) => {
   return String(num1);
 };
 
-export const rules = 'Find the greatest common divisor of given numbers.';
+const generateRound = () => {
+  const firstNumber = getRandomInRange(1, 100);
+  const secondNumber = getRandomInRange(1, 100);
+  const roundQuestion = `${firstNumber} ${secondNumber}`;
+  const correctAnswer = getGcd(firstNumber, secondNumber);
+
+  return [roundQuestion, correctAnswer];
+};
 
 export default () => {
-  const numberOne = randomNumber(1, 100);
-  const numberTwo = randomNumber(1, 100);
-  const roundQuestion = `${numberOne} ${numberTwo}`;
-  const roundResult = getGcd(numberOne, numberTwo);
-
-  return [roundQuestion, roundResult];
+  const questionPhrase = 'Find the greatest common divisor of given numbers.';
+  mainEngine(questionPhrase, generateRound);
 };
